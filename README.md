@@ -38,14 +38,11 @@
         blockAddress.setPublicKey(publicKey);
         blockAddress.setAddress(address);
         System.out.println(address);
-
         if (privateKey.length() < 64) {
             for (int i = 0; i < 64 - privateKey.length(); i++) {
                 privateKey = 0 + privateKey;
             }
-//            throw new ServiceException("私钥异常");
         }
-//        System.out.println(privateKey);
         return blockAddress;
     }
                                   
@@ -98,7 +95,7 @@
   
   
   
-  
+//导入jar包  
           <dependency>
             <groupId>org.bitcoinj</groupId>
             <artifactId>bitcoinj-core</artifactId>
