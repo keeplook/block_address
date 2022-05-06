@@ -1,8 +1,7 @@
 # block_address 地址私钥创建
 
-  public static BlockAddress createAddress(List<String> mnemonic, String path) throws MnemonicException.MnemonicLengthException, ServiceException {
-
-  System.out.println(path);
+     public static BlockAddress createAddress(List<String> mnemonic, String path) throws MnemonicException.MnemonicLengthException, ServiceException {
+        System.out.println(path);
         String[] pathArray = path.split("/");
         long creationTimeSeconds = System.currentTimeMillis() / 1000;
         SecureRandom secureRandom = new SecureRandom();
