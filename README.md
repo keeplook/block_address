@@ -1,14 +1,17 @@
 # block_address
 地址私钥创建
+
   public static BlockAddress createAddress(List<String> mnemonic, String path) throws MnemonicException.MnemonicLengthException, ServiceException {
-//        System.out.println(path);
+
+  System.out.println(path);
         String[] pathArray = path.split("/");
         long creationTimeSeconds = System.currentTimeMillis() / 1000;
         SecureRandom secureRandom = new SecureRandom();
         byte[] entropy = new byte[DeterministicSeed.DEFAULT_SEED_ENTROPY_BITS / 8];
         secureRandom.nextBytes(entropy);
         DeterministicSeed ds = new DeterministicSeed(mnemonic, null, "", creationTimeSeconds);
-////        //根私钥
+
+        //根私钥
         byte[] seedBytes = ds.getSeedBytes();
 
         if (seedBytes == null) throw new ServiceException("根私钥异常");
